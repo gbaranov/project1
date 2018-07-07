@@ -1,0 +1,10 @@
+.settings {
+    float: right;
+}
+.fa-cog{
+    color: lightgrey;
+}
+.fa-cog:hover {
+    transition: .7s;
+    color: 	#696969;
+}
