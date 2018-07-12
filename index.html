@@ -1,18 +1,56 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-    <script src="main.js"></script>
+
 </head>
+
 <body>
-    <div class="settings">
-        <i class="fas fa-cog fa-2x"></i>
+
+    <div id="container">
+
+        
+        <i class="fas fa-cog fa-2x" id="settings"></i>
+
+        <div id="snackbar" class="hiding">
+            Settings
+            <br>
+            <br>
+            <br>
+            <p>Select a Custom Background Image!</p>
+            <br>
+            <input type="file" value="upload" id="fileButton" />
+            <progress value="0" max="100" id="uploader"></progress>
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div id="search">
+            <form method="get" action="https://www.google.com/search">
+                <input id="field" type="text" name="q" size="31" value="">
+            </form>
+        </div>
+
     </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="assets/javascript/app.js"></script>
 </body>
+
 </html>
