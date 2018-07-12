@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Project 1</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-    <script src="main.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Live Chat </title>
+	<link rel="stylesheet" type="text/css" href="chat.css">
+	<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
 </head>
-<body>
-    <div class="settings">
-        <i class="fas fa-cog fa-2x"></i>
-    </div>
-</body>
-</html>
 
+	<body>
+		<input id="username" type="text" placeholder="Name"><br/>
+		<input id="text" type="text" placeholder="Message"><br/>
+		<button id="post">Post</button><br/>
+		<div id="results"></div>
+		<hr/>
+		<script src="chat.js"></script>
+	</body>
+
+</html>
