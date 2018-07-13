@@ -15,7 +15,7 @@ $(document).ready(function () {
     var uploader = document.getElementById('uploader');
     var fileButton = document.getElementById('fileButton');
 
-    fileButton.addEventListener('change', function(event){
+    fileButton.addEventListener('change', function (event) {
         //create a storage ref
         var file = event.target.files[0];
 
@@ -26,89 +26,64 @@ $(document).ready(function () {
 
         task.on('state_changed',
 
-        //progress bar
-        function progress(snapshot){
-            var percentage = (snapshot.bytesTransferred /
-                snapshot.totalBytes) * 100;
+            //progress bar
+            function progress(snapshot) {
+                var percentage = (snapshot.bytesTransferred /
+                    snapshot.totalBytes) * 100;
                 uploader.value = percentage;
                 console.log(percentage);
-    
+
             },
 
             function error(err) {
 
             },
 
-            function complete(){
+            function complete() {
                 alert("your file has been uploaded!");
-                
+
 
 
                 var storageRef = firebase.storage().ref("placeholder/" + file.name);
-                storageRef.getDownloadURL().then(function(url) {
-                console.log(url);
-                $("#container").css("background-image", `url(${url})`);
+                storageRef.getDownloadURL().then(function (url) {
+                    console.log(url);
+                    $("#container").css("background-image", `url(${url})`);
                 });
-
             }
 
-            
+
 
 
         );
-        
+
 
     });
-    
-
-    
-
-    
-
-    //Update progress bar
-    
-
-    
-    // },
-
-    // function error(err) {
-
-    // },
-
-    // function complete(){
-
-    // }
 
 
 
-        // DISPLAYING AND HIDING SETTINGS BAR
-        $("#settings").on("click", function () {
 
-            if ($('#snackbar').hasClass('hiding')) {
-                $("#snackbar").addClass('showing');
-                $("#snackbar").removeClass('hiding');
-    
-            } else if ($('#snackbar').hasClass('showing')) {
-                $("#snackbar").addClass('hiding')
-                $('#snackbar').removeClass('showing');
-            }
-    
-        })
-    
+
+
+
+    // DISPLAYING AND HIDING SETTINGS BAR
+    $("#settings").on("click", function () {
+
+        if ($('#snackbar').hasClass('hiding')) {
+            $("#snackbar").addClass('showing');
+            $("#snackbar").removeClass('hiding');
+
+        } else if ($('#snackbar').hasClass('showing')) {
+            $("#snackbar").addClass('hiding')
+            $('#snackbar').removeClass('showing');
+        }
+
+    })
+
+    $("#close").on("click", function () {
+        if ($('#snackbar').hasClass('showing')) {
+            $("#snackbar").addClass('hiding')
+            $('#snackbar').removeClass('showing');
+        }
+    });
+
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

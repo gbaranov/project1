@@ -1,3 +1,10 @@
+#close{
+    float:right;
+}
+#close:hover {
+    transform: scale(1.2);
+}
+
 #container{
     width: 100%;
     height:100%;
@@ -6,6 +13,7 @@
     position: absolute; 
     top: 0; 
     left: 0;
+    background-size: 100% 100%;
 }
 form{
     margin:0;
@@ -13,16 +21,45 @@ form{
     display:block;
 }
 #field{
-    width: 35%;
+    width: 40%;
     height: 40px;
-    margin-top: 40vh;
-    border: 1px solid #b8b8b8;
+    margin-top: 50vh;
+    border: 0.9px solid rgb(184, 184, 184, 0.4);
     padding: 3px;
     font-family: 'Ubuntu';
     font-size: 20px;
-    opacity: 0.3;
+    background-color: rgb(184, 184, 184, 0.1);
     transition: all 0.5s ease 0s;
+    border-radius: 2px;
 }
+#field:focus{
+    outline-width: 0;
+    border-color: rgb(184, 184, 184, 0);
+}
+
+#fw-container{
+    width: 40%;
+    height: 60px;
+    margin: 0 auto;
+    margin-top: 2%;
+    outline-width: 0;
+    border-color: rgb(184, 184, 184, 0);
+    font-family: 'Ubuntu';
+    background-color: rgb(184, 184, 184, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+    color: black;
+    text-align: left;
+    line-height: 1.8;
+}
+
+
+
+
+
+
+
+
 .fa-cog {
     color: lightgrey;
     transition: .7s;
@@ -44,8 +81,8 @@ form{
     margin-right: 5px;
     margin-top: 5px;
     width: 30%;
-    height: 100px;
-    background-color: #333;
+    
+    background-color:rgba(51, 51, 51, 0.9);
     /* Black background color */
     color: #fff;
     /* White text color */
@@ -57,8 +94,9 @@ form{
     /* Padding */
     z-index: 0;
     /* Add a z-index if needed */
-    border: 1px solid black;
+    border: 1px solid rgba(51, 51, 51, 0.9);
     position: absolute;
+    
 }
 
 .hiding {
@@ -66,6 +104,7 @@ form{
 }
 
 .showing {
+    
     visibility: visible;
     /* Show the snackbar */
     -webkit-animation: fadein 1s;
