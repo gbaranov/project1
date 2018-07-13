@@ -16,10 +16,8 @@ $(document).ready(function(){
 
         }});
     }});
-        
-    
-
 });
+
 
 
 
