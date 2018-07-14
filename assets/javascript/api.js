@@ -6,10 +6,10 @@ $(document).ready(function(){
         $('#time').text(geoResult.time_zone.current_time);
         $('#zipcode').text(geoResult.zipcode);
         $('#flag').attr("src", geoResult.country_flag);
-        console.log(geoResult);
+    
 
         $.ajax({url: "https://api.openweathermap.org/data/2.5/weather?q=" + geoResult.zipcode + "&appid=2eaa69456d41409f465bced69131d4e4", success: function(weatherResult){
-            console.log(weatherResult);
+            
             $('#temp').text(weatherResult.main.temp);
             $('#wind-speed').text(weatherResult.wind.speed);
             $('#weather-description').text(weatherResult.weather[0].description);
