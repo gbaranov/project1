@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman2</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="app.js" charset="utf-8"></script>
+  </head>
+  <body>
+  
+
+    <a href="#popupBasic" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-transition="slideup" data-position-to="window">Basic Popup</a>
+
+      <div data-role="popup" id="popupBasic" class="ui-content">
+        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+        <iframe src="https://codesandbox.io/embed/new?codemirror=1&highlights=11,12,13,14"  href="style2.css" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+      </div>
+
+
+
+
+      <a href="#basicLibrary" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-transition="slideup" data-position-to="window">JS Methods Library</a>
+
+      <div data-role="popup" id="basicLibrary" class="ui-content2">
+        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+          <div data-role="collapsible" data-inset="false">
+            <h4>JS String Methods</h4>
+            <li><a href="#"></a><strong>.length</strong> property returns the length of a string.</li>
+            <li><a href="#"></a><strong>.indexOf()</strong> returns the index of (the position of) the first occurrence of a specified text in a string.</li>
+            <li><a href="#"></a><strong>.slice()</strong> extracts a part of a string and returns the extracted part in a new string.</li>
+            <li><a href="#"></a><strong>.substring()</strong> is similar to slice().The difference is that substring() cannot accept negative indexes.</li>
+            <li><a href="#"></a><strong>.substr()</strong> is similar to slice().The difference is that the second parameter specifies the length of the extracted part.</li>
+            <li><a href="#"></a><strong>.replace()</strong> replaces a specified value with another value in a string.</li>
+            <li><a href="#"></a><strong>.toUpperCase()</strong> property converts the string to upper case</li>
+            <li><a href="#"></a><strong>.toLowerCase()</strong> property converts the string to lower case</li>
+            <li><a href="#"></a><strong>.concat()</strong> joins two or more strings.</li>
+            <li><a href="#"></a><strong>.trim() </strong> removes whitespace from both sides of a string.</li>
+            <li><a href="#"></a><strong>.charAt()</strong> returns the character at a specified index (position) in a string</li>
+            <li><a href="#"></a><strong>.charCodeAt()</strong> returns the unicode of the character at a specified index in a string.</li>
+            <li><a href="#"></a><strong>.split()</strong> converts string to array</li>
+
+          </div>
+
+          <div data-role="collapsible" data-inset="false">
+              <h4>JS Array Methods</h4>
+              <li><a href="#"></a><strong>.toString()</strong> converts an array to a string of (comma separated) array values.</li>
+              <li><a href="#"></a><strong>.join()</strong> behaves just like toString(), but in addition you can specify the separator.</li>
+              <li><a href="#"></a><strong>.pop()</strong> method removes the last element from an array.</li>
+              <li><a href="#"></a><strong>.push()</strong> method removes the first array element and "shifts" all other elements to a lower index.</li>
+              <li><a href="#"></a><strong>.shift()</strong> is similar to slice().The difference is that the second parameter specifies the length of the extracted part.</li>
+              <li><a href="#"></a><strong>.unshift()</strong> method adds a new element to an array (at the beginning), and "unshifts" older elements.</li>
+              <li><a href="#"></a><strong>.splice()</strong> method can be used to add new items to an array.</li>
+              <li><a href="#"></a><strong>.concat()</strong> method creates a new array by merging (concatenating) existing arrays.</li>
+              <li><a href="#"></a><strong>.slice()</strong> method slices out a piece of an array into a new array.</li>
+  
+            </div>
+
+          <div data-role="collapsible" data-inset="false">
+              <h4>JS Number Methods</h4>
+              <li><a href="#"></a><strong>.toString()</strong> returns a number as a string.</li>
+              <li><a href="#"></a><strong>.toExponential()</strong> returns a string, with a number rounded and written using exponential notation.</li>
+              <li><a href="#"></a><strong>.toFixed()</strong>  returns a string, with the number written with a specified number of decimals.</li>
+              <li><a href="#"></a><strong>.toPrecision()</strong> returns a string, with a number written with a specified length.</li>
+              <li><a href="#"></a><strong>.valueOf()</strong> returns a number as a number.</li>
+              <li><a href="#"></a><strong>.Number()</strong> returns a number, converted from its argument.</li>
+              <li><a href="#"></a><strong>.parseFloat()</strong> parses its argument and returns a floating point number.</li>
+              <li><a href="#"></a><strong>.parseInt()</strong> parses its argument and returns an integer.</li>
+  
+            </div>
+
+          <div data-role="collapsible" data-inset="false">
+              <h4>JS Math Methods</h4>
+              <li><a href="#"></a><strong>.PI</strong> returns 3.141592653589793.</li>
+              <li><a href="#"></a><strong>.round(x)</strong> returns the value of x rounded to its nearest integer.</li>
+              <li><a href="#"></a><strong>.pow(x)</strong> .pow(x, y) returns the value of x to the power of y.</li>
+              <li><a href="#"></a><strong>.sqrt(x)</strong> returns the square root of x.</li>
+              <li><a href="#"></a><strong>.abs(x)</strong> .abs(x) returns the absolute (positive) value of x.</li>
+              <li><a href="#"></a><strong>.ceil()</strong> returns the value of x rounded up to its nearest integer.</li>
+              <li><a href="#"></a><strong>.floor(x)</strong>  returns the value of x rounded down to its nearest integer.</li>
+              <li><a href="#"></a><strong>.sin(x)</strong> returns the sine (a value between -1 and 1) of the angle x (given in radians).</li>
+              <li><a href="#"></a><strong>.cos(x)</strong> returns the cosine (a value between -1 and 1) of the angle x (given in radians).</li>
+              <li><a href="#"></a><strong>.min()</strong> find the lowest value in a list of arguments.</li>
+              <li><a href="#"></a><strong>.max()</strong> find the  highest value in a list of arguments.</li>
+              <li><a href="#"></a><strong>.random()</strong> returns a random number between 0 (inclusive),  and 1 (exclusive).</li>
+  
+            </div>
+
+      </div>
+
+
+<script>
+$(document).ready(function(){  
+    $(".ui-content").draggable();
+});
+</script>
+
+  </body>
+</html>
+
+  
