@@ -28,7 +28,7 @@
         <i class="fas fa-cog fa-2x"></i>
     </div>
 
-    <div id="location-block">
+    <!-- <div id="location-block">
         <h2 id="testing">Location block</h2>
         <div id="country"></div>
         <div id="state"></div>
@@ -36,24 +36,30 @@
         <div id="time"></div>
         <div id="zipcode"></div>
         <img id="flag" />
-    </div>
+    </div> -->
 
     <div id="weather-block">
-        <h2 id="testing">Weather block</h2>
         <div id="temp"></div>
-        <div id="wind-speed"></div>
         <div id="weather-description"></div>
     </div>
 
-    <div id="bookmarks">
-        <h2 id="testing">Bookmarks</h2>
-        <input id="bookmark-title" type="text" value="Title">
-        <br />
-        <input id="bookmark-url" type="text" value="http://">
-        <br />
-        <input id="bookmark-add" type="submit" value="Add">
+
+
+    <!-- CLOCK BLOCK -->
+
+    <div class="clock">
+            <div id="date"></div>
+            <ul class="shadow-ul">
+                  <li class="shadow" id="hours"></li>
+                  <li class="shadow" id="point">:</li>
+                  <li class="shadow" id="min"></li>
+                  <li class="shadow" id="point">:</li>
+                  <li class="shadow" id="sec"></li>
+                  <li class="shadow" id="ampm"></li>
+            </ul>
     </div>
 
+    <!-- CLOCK BLOCK END -->
 
 
     <!-- CHAT BLOCK -->
@@ -105,9 +111,9 @@
 
         <!-- Modal content -->
         <div class="modal-content">
-          <div class="modal-header">
+          <!-- <div class="modal-header">
             <span class="close">&#10006</span>
-          </div>
+          </div> -->
           <div class="modal-body">
             <iframe src="https://codesandbox.io/embed/new?codemirror=1&highlights=11,12,13,14"  href="style2.css" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
           </div>
@@ -130,7 +136,8 @@
     <script src="assets/javascript/api.js"></script>
     <script src="assets/javascript/app.js"></script>
     <script src="assets/javascript/bookmarks.js"></script>
-    <script src="assets/javascript/chat.js"></script>    
+    <script src="assets/javascript/chat.js"></script>
+    <script src="assets/javascript/clock.js"></script>    
 
 
 </body>
