@@ -8,11 +8,13 @@ $(document).ready(function(){
         $('#flag').attr("src", geoResult.country_flag);
     
 
-        $.ajax({url: "https://api.openweathermap.org/data/2.5/weather?q=" + geoResult.zipcode + "&appid=2eaa69456d41409f465bced69131d4e4", success: function(weatherResult){
-            
-            $('#temp').text(weatherResult.main.temp);
+        $.ajax({url: "https://api.openweathermap.org/data/2.5/weather?zip=" + geoResult.zipcode + "&units=imperial&appid=2eaa69456d41409f465bced69131d4e4", success: function(weatherResult){
+            $('#temp').text(Math.floor(weatherResult.main.temp) + " F");
             $('#wind-speed').text(weatherResult.wind.speed);
             $('#weather-description').text(weatherResult.weather[0].description);
+
+            
+
 
         }});
     }});

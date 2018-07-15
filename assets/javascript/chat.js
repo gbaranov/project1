@@ -11,17 +11,16 @@ firebase.initializeApp(config);
 
 $('#post').on("click", function(){
     var msgUser = $('#name-input').val();
+    $('#name-input').attr("value", msgUser);
     var msgText = $('#message-input').val();
-    console.log(msgUser + msgText);
     firebase.database().ref().push({
         "user" : msgUser,
         "msg" : msgText
-});
-
+    });
+    $('#message-input').val(" ");
 });
 
 firebase.database().ref().on("child_added", function(childSnapshot){
-    console.log(childSnapshot.val());
     var lileft = $('<li>').addClass("left clearfix");
 
     var spanimg = $('<span>').addClass("chat-img pull-left");

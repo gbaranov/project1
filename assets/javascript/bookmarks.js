@@ -29,7 +29,7 @@ function popIt() {
   localStorage.setItem('websites', JSON.stringify(restoredWebsites));
   outputIt();
 }
-function pushIt() {
+function pushIt(event) {
   event.preventDefault();
   localStorage.setItem('websites', JSON.stringify(restoredWebsites));
   restoredWebsites.queue.push({
