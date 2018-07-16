@@ -21,11 +21,12 @@ $('#post').on("click", function(){
 });
 
 firebase.database().ref().on("child_added", function(childSnapshot){
+    var nametag = childSnapshot.val().user.charAt(0);
     var lileft = $('<li>').addClass("left clearfix");
 
     var spanimg = $('<span>').addClass("chat-img pull-left");
     var img = $('<img>').addClass("img-circle");
-    img.attr("src", "http://placehold.it/50/55C1E7/fff&text=JS");
+    img.attr("src", "http://placehold.it/50/55C1E7/fff&text=" + nametag);
     spanimg.append(img);
 
     var chatbody = $('<div>').addClass("chat-body clearfix");
