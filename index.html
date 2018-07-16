@@ -8,21 +8,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
         crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:500i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
     <link href="https://fonts.googleapis.com/css?family=Lateef" rel="stylesheet">
     <title>Project 1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
         crossorigin="anonymous">
     <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
 
 
 </head>
@@ -104,6 +114,45 @@
 
     </div>
 
+    <!-- CHAT BLOCK -->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading" id="accordion">
+                            <span class="glyphicon glyphicon-comment"></span>
+                            <strong class="primary-font"> Chat</strong>
+                            <div class="btn-group pull-right">
+                                <a type="button" class="btn btn-default btn-xs" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                    <span class="glyphicon glyphicon-chevron-down"></span>
+                                </a>
+                            </div>
+                        </div>
+                    <div class="panel-collapse collapse" id="collapseOne">
+                        <div class="panel-body">
+                            <ul id="chat-main" class="chat">
+    
+    
+                            </ul>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="input-group">
+                                <input id="name-input" type="text" class="form-control input-sm" placeholder="Your name here..." />
+                                <input id="message-input"  type="text" class="form-control input-sm" placeholder="Your message here..." />
+                                <span class="input-group-btn send-button">
+                                    <button id="post" type="submit" class="btn btn-warning btn-sm send-btn" id="btn-chat">Send</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <!-- CHAT BLOCK END -->
+
 
 
     <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
@@ -111,9 +160,10 @@
     <script src="assets/javascript/app.js"></script>
     <script src="assets/javascript/api.js"></script>
     <script src="assets/javascript/clock.js"></script>
+    <script src="assets/javascript/chat.js"></script>
     <!-- 
     <script src="assets/javascript/bookmarks.js"></script>
-    <script src="assets/javascript/chat.js"></script>
+    
      -->
 </body>
 
