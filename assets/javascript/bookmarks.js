@@ -1,6 +1,6 @@
 
 var restoredWebsites = JSON.parse(localStorage.getItem('websites'));
-    var counter=0;
+    var counter = 0;
     var websites =
 { 
   queue: 
