@@ -179,7 +179,6 @@ form{
 .box__success,
 .box__error {
   display: none;
-
 }
 
 
@@ -251,7 +250,6 @@ li{
     color: whitesmoke;
 }
 
-<<<<<<< HEAD
 #btnToggle {
     float: left;
 }
@@ -266,6 +264,11 @@ li{
     border-radius: 2px;
     overflow: hidden;
     text-align: center;
+    
 }
-=======
->>>>>>> 15f90a0f28173fe5efdec8de0e126cd2c41c4c0c
+.link{
+    color: rgba(51, 51, 51);
+    text-decoration: none;
+    border-color: black;
+    border-style: solid;
+}
