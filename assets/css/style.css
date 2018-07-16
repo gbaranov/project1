@@ -262,13 +262,26 @@ li{
     outline-width: 0;
     font-family: 'Ubuntu';
     border-radius: 2px;
-    overflow: hidden;
     text-align: center;
+    text-decoration: inherit;
     
 }
-.link{
+
+.item {
+    padding: 15px;
     color: rgba(51, 51, 51);
-    text-decoration: none;
+    text-decoration: inherit;
     border-color: black;
     border-style: solid;
+}
+
+a{
+    padding: 15px;
+    color: rgba(51, 51, 51);
+    text-decoration: inherit;
+    border-color: black;
+    border-width: 1px;
+    border-radius: 2px;
+    border-style: solid;
+    background-color: rgb(184, 184, 184, 0.5);
 }

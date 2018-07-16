@@ -141,7 +141,7 @@ $(document).ready(function () {
             var links = linkOptions.fetchLinks();
             var html = '<ul>';
             for (var i=0; i<links.length; i++) {
-                html += '<li><span class="link"><a href="' + links[i].url + '">' + links[i].label + '</a><button title="Remove" class="remove" id="' + i + '">✖</button></span></li>';
+                html += '<li class="item"><span class="link"><a href="' + links[i].url + '">' + links[i].label + '</a><button title="Remove" class="remove" id="' + i + '">✖</button></span></li>';
             };
             html += '</ul>';
             document.getElementById('links').innerHTML = html;
