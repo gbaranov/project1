@@ -1,11 +1,186 @@
-.settings {
-    float: right;
+body{
+    font-family: 'Lateef', cursive;
 }
-.fa-cog{
+
+#close{
+    float:right;
+}
+#close:hover {
+    transform: scale(1.2);
+}
+
+#container{
+    width: 100%;
+    height:100%;
+    margin: 0 auto;
+    text-align: center;
+    position: absolute; 
+    top: 0; 
+    left: 0;
+    background-size: 100% 100%;
+}
+form{
+    margin:0;
+    padding:0;
+    display:block;
+}
+#field{
+    width: 40%;
+    height: 40px;
+    margin-top: 50vh;
+    border: 0.9px solid rgb(184, 184, 184, 0.4);
+    padding: 3px;
+    font-family: 'Ubuntu';
+    font-size: 20px;
+    background-color: rgb(184, 184, 184, 0.1);
+    transition: all 0.5s ease 0s;
+    border-radius: 2px;
+}
+#field:focus{
+    outline-width: 0;
+    border-color: rgb(184, 184, 184, 0);
+}
+
+#fw-container{
+    width: 40%;
+    height: 60px;
+    margin: 0 auto;
+    margin-top: 2%;
+    outline-width: 0;
+    border-color: rgb(184, 184, 184, 0);
+    font-family: 'Ubuntu';
+    background-color: rgb(184, 184, 184, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+.fa-cog {
     color: lightgrey;
+    transition: .7s;
+    z-index: 10;
+    margin-right: 10px;
+    bottom: 5px;
+    right: 0;
+    position: absolute;
+    z-index: 10;
 }
+
 .fa-cog:hover {
     transition: .7s;
+    color: #696969;
+}
+
+#snackbar {
+    right: 0;
+    margin-right: 5px;
+    margin-top: 5px;
+    width: 30%;
+    
+    background-color:rgba(51, 51, 51, 0.9);
+    /* Black background color */
+    color: #fff;
+    /* White text color */
+    text-align: left;
+    /* left text */
+    border-radius: 2px;
+    /* Rounded borders */
+    padding: 16px;
+    /* Padding */
+    z-index: 0;
+    /* Add a z-index if needed */
+    border: 1px solid rgba(51, 51, 51, 0.9);
+    position: absolute;
+    
+}
+
+.hiding {
+    visibility: hidden;
+}
+
+.showing {
+    
+    visibility: visible;
+    /* Show the snackbar */
+    -webkit-animation: fadein 1s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 1s;
+    /* Internet Explorer */
+    -o-animation: fadein 1s;
+    /* Opera < 12.1 */
+    animation: fadein 1s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Firefox < 16 */
+
+@-moz-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Internet Explorer */
+
+@-ms-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Opera < 12.1 */
+
+@-o-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.box__dragndrop,
+.box__uploading,
+.box__success,
+.box__error {
+  display: none;
+}
+=======
     color: 	#696969;
 }
 
