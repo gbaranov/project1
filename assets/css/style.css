@@ -1,3 +1,7 @@
+body{
+    font-family: 'Lateef', cursive;
+}
+
 #close{
     float:right;
 }
@@ -48,9 +52,7 @@ form{
     background-color: rgb(184, 184, 184, 0.1);
     border-radius: 2px;
     overflow: hidden;
-    color: black;
     text-align: left;
-    line-height: 1.8;
 }
 
 
