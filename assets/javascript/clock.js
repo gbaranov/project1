@@ -19,7 +19,6 @@ $(document).ready(function() {
     setInterval( function() {
         var hours = new Date().getHours();
         var ampm;
-        console.log(hours);
         if (hours > 12) {
             hours -= 12;
             ampm = "PM";
