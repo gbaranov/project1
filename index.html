@@ -4,7 +4,6 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
     <title>Welcome Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
@@ -21,9 +20,6 @@
     <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>  
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-
-
 
 
 </head>
@@ -68,105 +64,15 @@
 
     </div>
 
-    <div id="weather-block">
-        <div id="temp"></div>
-        <div id="weather-description"></div>
-    </div>
 
 
-
-    <!-- CLOCK BLOCK -->
-
-    <div class="clock">
-            <div id="date"></div>
-            <ul class="shadow-ul">
-                  <li class="shadow" id="hours"></li>
-                  <li class="shadow" id="point">:</li>
-                  <li class="shadow" id="min"></li>
-                  <li class="shadow" id="point">:</li>
-                  <li class="shadow" id="sec"></li>
-                  <li class="shadow" id="ampm"></li>
-            </ul>
-    </div>
-
-    <!-- CLOCK BLOCK END -->
-
-
-    <!-- CHAT BLOCK -->
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-5">
-                <div class="panel panel-primary">
-                    <div class="panel-heading" id="accordion">
-                        <span class="glyphicon glyphicon-comment"></span> Chat
-                        <div class="btn-group pull-right">
-                            <a type="button" class="btn btn-default btn-xs" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                                <span class="glyphicon glyphicon-chevron-down"></span>
-                            </a>
-                        </div>
-                    </div>
-                <div class="panel-collapse collapse" id="collapseOne">
-                    <div class="panel-body">
-                        <ul id="chat-main" class="chat">
-
-
-                        </ul>
-                    </div>
-                    <div class="panel-footer">
-                        <div class="input-group">
-                            <input id="name-input" type="text" class="form-control input-sm" placeholder="Your name here..." />
-                            <input id="message-input"  type="text" class="form-control input-sm" placeholder="Your message here..." />
-                            <span class="input-group-btn send-button">
-                                <button id="post" type="submit" class="btn btn-warning btn-sm send-btn" id="btn-chat">Send</button>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- CHAT BLOCK END -->
-  
-<!--Vlads Code-->
-
-    
-
-    <button id="myBtn">Open SandBox</button>
-
-
-    <div id="myModal" class="modal">
-
-        <!-- Modal content -->
-        <div class="modal-content">
-            <div class="modal-body">
-                <iframe src="https://codesandbox.io/embed/new?codemirror=1&highlights=11,12,13,14"  href="style2.css" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
-            </div>
-
-        </div>
-      
-    </div>
-
-      
-      <div id="LocalStorageDiv">
-        <input id='websiteName' type='text' placeholder="Type Value" />
-        <input id='websiteURL' type='text' placeholder="Type Value" />
-        <button onclick="pushIt()">Add</button>
-        
-        <button onclick="popIt()">Delete</button>
-        <p id="demo"></p>
-      </div>
-
-
-    <script src="assets/javascript/api.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="assets/javascript/app.js"></script>
+    <!-- <script src="assets/javascript/api.js"></script>
     <script src="assets/javascript/bookmarks.js"></script>
     <script src="assets/javascript/chat.js"></script>
-    <script src="assets/javascript/clock.js"></script>    
-
-
+    <script src="assets/javascript/clock.js"></script> -->
 </body>
-</html>
 
+</html>
