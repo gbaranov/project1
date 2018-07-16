@@ -1,7 +1,6 @@
-
 $(document).ready(function () {
 
-
+    $(".ppProgress").hide();
     // Initialize Firebase
     var config = {
         apiKey: "AIzaSyCABpnha764rP7TzASFn4eFclnq_KzIR2c",
@@ -33,6 +32,7 @@ $(document).ready(function () {
                     snapshot.totalBytes) * 100;
                 uploader.value = percentage;
                 console.log(percentage);
+                $(".ppProgress").show();
 
             },
 
@@ -41,14 +41,15 @@ $(document).ready(function () {
             },
 
             function complete() {
-                alert("your file has been uploaded!");
+                alert("Your file has been uploaded!");
 
-
+                $(".ppProgress").hide();
 
                 var storageRef = firebase.storage().ref("placeholder/" + file.name);
                 storageRef.getDownloadURL().then(function (url) {
                     console.log(url);
                     $("#container").css("background-image", `url(${url})`);
+                    
                 });
             }
 
@@ -87,30 +88,34 @@ $(document).ready(function () {
         }
     });
 
+
+
+    //DARK/LIGHT THEME SETTINGS
+    $("#darkTheme").on("click", function () {
+        console.log("dark");
+        if ($('#clockColor').hasClass('lightClock')){
+            $("#clockColor").addClass('darkClock')
+            $('#clockColor').removeClass('lightClock');
+        }
+        if ($('#weather-block').hasClass('lightClock')){
+            $("#weather-block").addClass('darkClock')
+            $('#weather-block').removeClass('lightClock');
+        }
+    })
+
+    $("#lightTheme").on("click", function () {
+
+        if ($('#clockColor').hasClass('darkClock')) {
+            $("#clockColor").addClass('lightClock')
+            $('#clockColor').removeClass('darkClock');
+        }
+        if ($('#weather-block').hasClass('darkClock')) {
+            $("#weather-block").addClass('lightClock')
+            $('#weather-block').removeClass('darkClock');
+        }
+    })
+
 });
 
-// var modal = document.getElementById('myModal');
-        
-// // Get the button that opens the modal
-// var btn = document.getElementById("myBtn");
 
-// // Get the <span> element that closes the modal
-// var span = document.getElementsByClassName("close")[0];
-
-// // When the user clicks the button, open the modal 
-// btn.onclick = function() {
-//     modal.style.display = "block";
-// }
-
-// // When the user clicks on <span> (x), close the modal
-// span.onclick = function() {
-//     modal.style.display = "none";
-// }
-
-// // When the user clicks anywhere outside of the modal, close it
-// window.onclick = function(event) {
-//     if (event.target == modal) {
-//         modal.style.display = "none";
-//     }
-// }
 
