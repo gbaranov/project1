@@ -1,5 +1,6 @@
+
 var restoredWebsites = JSON.parse(localStorage.getItem('websites'));
-    var counter = 1;
+    var counter=0;
     var websites =
 { 
   queue: 
@@ -11,27 +12,27 @@ var restoredWebsites = JSON.parse(localStorage.getItem('websites'));
   ]
 };
 
+localStorage.setItem('websites', JSON.stringify(websites));
+localStorage.getItem('websites', JSON.stringify(websites));
+
 outputIt();
 
 function outputIt() {
-  var restoredWebsites = JSON.parse(localStorage.getItem('websites'));
   var outputs = "";
   for(var i = 0; i < restoredWebsites.queue.length; i++)
   {
-    counter++;
+    
   	outputs += '<div id="'+restoredWebsites.queue[i].id + '">' + restoredWebsites.queue[i].id+':'+restoredWebsites.queue[i].name +'    url:'+ restoredWebsites.queue[i].nameURL +'</div>';
   }
   document.getElementById("demo").innerHTML= outputs;
 }
-function popIt() {
-  var restoredWebsites  = JSON.parse(localStorage.getItem('websites'));  
+function popIt() { 
   restoredWebsites.queue.shift();
   localStorage.setItem('websites', JSON.stringify(restoredWebsites));
   outputIt();
 }
-function pushIt(event) {
-  event.preventDefault();
-  localStorage.setItem('websites', JSON.stringify(restoredWebsites));
+function pushIt() {
+  counter++;
   restoredWebsites.queue.push({
     id:  counter,
     name: $('#websiteName').val(),
@@ -39,6 +40,7 @@ function pushIt(event) {
   });
   localStorage.setItem('websites', JSON.stringify(restoredWebsites));
   outputIt();
+  
 }
 
 
