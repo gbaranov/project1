@@ -13,9 +13,6 @@ $(document).ready(function(){
             $('#wind-speed').text(weatherResult.wind.speed);
             $('#weather-description').text(weatherResult.weather[0].description);
 
-            
-
-
         }});
     }});
 });

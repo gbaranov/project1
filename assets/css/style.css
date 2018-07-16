@@ -179,6 +179,7 @@ form{
 .box__success,
 .box__error {
   display: none;
+
 }
 
 
@@ -249,3 +250,4 @@ li{
     background-color: rgb(54, 57, 63, 0.8);
     color: whitesmoke;
 }
+
