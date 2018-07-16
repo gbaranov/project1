@@ -49,7 +49,7 @@ $(document).ready(function () {
                 storageRef.getDownloadURL().then(function (url) {
                     console.log(url);
                     $("#container").css("background-image", `url(${url})`);
-                    
+
                 });
             }
 
@@ -93,11 +93,11 @@ $(document).ready(function () {
     //DARK/LIGHT THEME SETTINGS
     $("#darkTheme").on("click", function () {
         console.log("dark");
-        if ($('#clockColor').hasClass('lightClock')){
+        if ($('#clockColor').hasClass('lightClock')) {
             $("#clockColor").addClass('darkClock')
             $('#clockColor').removeClass('lightClock');
         }
-        if ($('#weather-block').hasClass('lightClock')){
+        if ($('#weather-block').hasClass('lightClock')) {
             $("#weather-block").addClass('darkClock')
             $('#weather-block').removeClass('lightClock');
         }
@@ -115,42 +115,89 @@ $(document).ready(function () {
         }
     })
 
+
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-var modal = document.getElementById('myModal');
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function () {
-    modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-    modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+(function() {
+    var linkOptions = {
+        fetchLinks: function() {
+            var links = new Array;
+            var links_str = localStorage.getItem('link');
+            if (links_str != null) {
+                links = JSON.parse(links_str);
+            }
+            return links;
+        },
+        removeLink: function() {
+            var id = this.getAttribute('id');
+            var links = linkOptions.fetchLinks();
+            links.splice(id, 1);
+            localStorage.setItem('link', JSON.stringify(links));
+            linkOptions.showLinks();
+            return false;
+        },
+        showLinks: function() {
+            var links = linkOptions.fetchLinks();
+            var html = '<ul>';
+            for (var i=0; i<links.length; i++) {
+                html += '<li><span class="link"><a href="' + links[i].url + '">' + links[i].label + '</a><button title="Remove" class="remove" id="' + i + '">✖</button></span></li>';
+            };
+            html += '</ul>';
+            document.getElementById('links').innerHTML = html;
+            var buttons = document.getElementsByClassName('remove');
+            for (var i=0; i<buttons.length; i++) {
+                buttons[i].addEventListener('click', linkOptions.removeLink);
+            };
+        },
+        addLink: function() {
+            var linkNew = document.getElementById('urlInput').value;
+            var labelNew = document.getElementById('urlLabel').value;
+            var newLink = { "url": linkNew, "label": labelNew };
+            var links = linkOptions.fetchLinks();
+            if (linkNew == "" || labelNew == "") {
+                return false;
+            } else {
+                links.push(newLink);
+                localStorage.setItem('link', JSON.stringify(links));
+                linkOptions.showLinks();
+                document.getElementById('urlInput').value = ""
+                document.getElementById('urlLabel').value = ""
+            }
+        }
+    };
+    document.getElementById('addUrl').addEventListener('click', linkOptions.addLink);
+    linkOptions.showLinks();
+    var toggleMenu = {
+        btnToggle: document.getElementById('btnToggle'),
+        menu: document.getElementById('panel'),
+        btnIcon: document.getElementById('icon'),
+        btnClose: document.getElementsByClassName('remove'),
+        btnClick: function() {
+            toggleMenu.btnToggle.addEventListener('click', function() {
+                toggleMenu.menu.classList.toggle('hide');
+                toggleMenu.btnToggle.classList.toggle('active');
+                for (i=0; i<toggleMenu.btnClose.length; i++) {
+                    if (toggleMenu.btnClose[i].style.display == "none") {
+                        toggleMenu.btnClose[i].style.display = "block";
+                        toggleMenu.btnIcon.style.opacity = "1";
+                    } else {
+                        toggleMenu.btnClose[i].style.display = "none";
+                        toggleMenu.btnIcon.style.opacity = "0.7";
+                    }
+                };
+            });
+        },
+        btnCloseVis: function() {
+            for (i=0; i<toggleMenu.btnClose.length; i++) {
+                if (toggleMenu.btnClose[i].style.display = "block") {
+                    toggleMenu.btnClose[i].style.display = "none";
+                } else {
+                    toggleMenu.btnClose[i].style.display = "block";
+                }
+            };
+        }
+    };
+    toggleMenu.btnClick();
+    document.onload = toggleMenu.btnCloseVis();
+})();

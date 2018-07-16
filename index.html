@@ -52,18 +52,41 @@
 
             <br>
             <br>
+
+            <p>Add a Custom Bookmark</p>
+
+            <div class="hide" id="panel">
+                <form name="submitform" onsubmit="return false">
+                    <input id="urlLabel" list="defaultLabels" type="text" name="label" placeholder="label" title="Input label" required>
+                    <datalist id="defaultLabels">
+                        <option value="Example">
+                    </datalist>
+                    <input id="urlInput" list="defaultURLs" type="url" name="hostname" placeholder="link" title="Input link (URLs must start with https://)"
+                        required>
+                    <datalist id="defaultURLs">
+                        <option value="https://">
+                    </datalist>
+                    <button type="submit" title="Add link" id="addUrl" formnovalidate>➜</button>
+                </form>
+            </div>
+
+            <br>
+            <br>
+
+            <p>Edit Bookmarks</p>
+            <button aria-pressed="false" class="btnAdd" id="btnToggle" title="Toggle form to add link">
+                <i class="fas fa-pencil-alt" id="icon"></i>
+            </button>
+            <br>
+            <br>
             <i class="far fa-times-circle" id="close"></i>
-
-
-
-
         </div>
 
         <div id="weather-block" class="darkClock">
             <div id="temp" class="weatherTemp"></div>
-            
+
             <div id="city" class="weatherCity"></div>
-            
+
             <div id="weather-description" class="weatherType"></div>
         </div>
 
@@ -99,7 +122,16 @@
         </div>
 
 
+
+
+        <base target="_blank">
+        <!-- opens all links in a new window -->
+        <div id="links" class="links"></div>
+
     </div>
+
+
+
 
 
 
@@ -116,6 +148,11 @@
     <script src="assets/javascript/bookmarks.js"></script>
     <script src="assets/javascript/chat.js"></script>
      -->
+
+
+
+
+
 </body>
 
 </html>
