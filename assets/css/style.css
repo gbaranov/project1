@@ -86,7 +86,7 @@ form{
     right: 0;
     margin-right: 5px;
     margin-top: 5px;
-    width: 30%;
+    width: 20%;
     
     /* White text color */
     text-align: left;
@@ -179,7 +179,6 @@ form{
 .box__success,
 .box__error {
   display: none;
-
 }
 
 
@@ -330,3 +329,28 @@ li{
     background-color: rgb(54, 57, 63, 0.8);
     color: whitesmoke;
 }
+
+
+#btnToggle {
+    float: left;
+}
+
+.links{
+    width: 40%;
+    height: 60px;
+    margin: 0 auto;
+    margin-top: 2%;
+    outline-width: 0;
+    font-family: 'Ubuntu';
+    border-radius: 2px;
+    overflow: hidden;
+    text-align: center;
+    
+}
+.link{
+    color: rgba(51, 51, 51);
+    text-decoration: none;
+    border-color: black;
+    border-style: solid;
+}
+
