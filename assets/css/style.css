@@ -23,6 +23,7 @@ p{
     left: 0;
     background-size: 100% 100%;
     z-index: -5;
+    background-image: url("assets/images/trees.jpg");
 }
 form{
     margin:0;
@@ -286,7 +287,17 @@ a{
     background-color: rgb(54, 57, 63, 0.8);
     margin: 5px 5px 5px 5px;
 }
-
+a:hover {
+    padding: 10px;
+    color: #BDBDBD;
+    text-decoration: inherit;
+    
+    border-width: 1px;
+    border-radius: 3px;
+    
+    background-color: rgb(54, 57, 63, 0.8);
+    margin: 5px 5px 5px 5px;
+}
 
 
 
