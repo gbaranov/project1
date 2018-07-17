@@ -23,7 +23,7 @@ p{
     left: 0;
     background-size: 100% 100%;
     z-index: -5;
-    background-image: url("assets/images/trees.jpg");
+    background-image: url("../images/trees.jpg");
 }
 form{
     margin:0;
